@@ -1,78 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>JavaScript Quiz</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f0f0f0;
-    }
-    h1 {
-      color: #333;
-    }
-    #quiz {
-      background-color: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    label {
-      display: block;
-      margin: 10px 0;
-    }
-    button {
-      background-color: #0074d9;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    #result {
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    #highScore {
-      color: #333;
-      margin-top: 10px;
-    }
-    #timer {
-      font-weight: bold;
-      margin: 10px 0;
-    }
-  </style>
+    <title>JavaScript Quiz</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 <body>
-  <h1>JavaScript Quiz</h1>
-  <div id="quiz">
-    <p id="question"></p>
-    
-    <label>
-      <input type="radio" name="choice" value="A"> Choice A
-    </label>
-    
-    <label>
-      <input type="radio" name="choice" value="B"> Choice B
-    </label>
-    
-    <label>
-      <input type="radio" name="choice" value="C"> Choice C
-    </label>
-    
-    <label>
-      <input type="radio" name="choice" value="D"> Choice D
-    </label>
-    <button id="submitButton">Submit</button>
-  </div>
-  <p id="result"></p>
-  <p id="highScore">Highest Score: 0</p>
-  <div id="timer">Time: 15s remaining</div>
-
-  <script src="script.js"></script>
+    <div class="quiz-container">
+        <div class="start-screen">
+            <h2>Welcome to the Quiz!</h2>
+            <button id="start-button">Start</button>
+        </div>
+        <div class="question">
+            <h2>Question 1</h2>
+            <ul class="answers">
+                <li><button data-correct="true">Correct Answer 1</button></li>
+                <li><button data-correct="false">Wrong Answer 1</button></li>
+                <li><button data-correct="false">Wrong Answer 2</button></li>
+                <li><button data-correct="false">Wrong Answer 3</button></li>
+            </ul>
+        </div>
+        <div class="question">
+            <h2>Question 2</h2>
+            <ul class="answers">
+                <li><button data-correct="true">Correct Answer 2</button></li>
+                <li><button data-correct="false">Wrong Answer 1</button></li>
+                <li><button data-correct="false">Wrong Answer 2</button></li>
+                <li><button data-correct="false">Wrong Answer 3</button></li>
+            </ul>
+        </div>
+        <div class="question">
+            <h2>Question 3</h2>
+            <ul class="answers">
+                <li><button data-correct="true">Correct Answer 3</button></li>
+                <li><button data-correct="false">Wrong Answer 1</button></li>
+                <li><button data-correct="false">Wrong Answer 2</button></li>
+                <li><button data-correct="false">Wrong Answer 3</button></li>
+            </ul>
+        </div>
+        <div class="question">
+            <h2>Question 4</h2>
+            <ul class="answers">
+                <li><button data-correct="true">Correct Answer 4</button></li>
+                <li><button data-correct="false">Wrong Answer 1</button></li>
+                <li><button data-correct="false">Wrong Answer 2</button></li>
+                <li><button data-correct="false">Wrong Answer 3</button></li>
+            </ul>
+        </div>
+        <div class="question">
+            <h2>Question 5</h2>
+            <ul class="answers">
+                <li><button data-correct="true">Correct Answer 5</button></li>
+                <li><button data-correct="false">Wrong Answer 1</button></li>
+                <li><button data-correct="false">Wrong Answer 2</button></li>
+                <li><button data-correct="false">Wrong Answer 3</button></li>
+            </ul>
+        </div>
+        <div class="timer">
+            Time left: <span id="timer-display">60</span> seconds
+        </div>
+        <div class="score">
+            Score: <span id="user-score">0</span>
+        </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
