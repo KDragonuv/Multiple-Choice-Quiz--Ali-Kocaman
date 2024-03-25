@@ -36,10 +36,10 @@ function handleAnswer(event) {
     if (isCorrect) {
         userScore++;
     } else {
-        timeLeft -= 10;          // <= Deduct 10 seconds for a wrong answer.
+        timeLeft -= 10;                     // <= Deduct 10 seconds for a wrong answer.
         if (timeLeft < 0) {
-            timeLeft = 0;       // <=  Ensure the timer doesn't go negative.
-        }
+            timeLeft = 0;                   // <= Ensure the timer doesn't go negative.
+        }   
     }
 
     updateScoreDisplay();
@@ -88,13 +88,14 @@ function endQuiz() {
     quizContainer.appendChild(endScreen);
 
     document.getElementById('save-button').addEventListener('click', function () {
-        const initials = document.getElementById('initials').value;                                    // <=  Save initials and score or perform other actions.
+        const initials = document.getElementById('initials').value;                             // <= Save initials and score or perform other action.
+        s
     });
 }
 
 startButton.addEventListener('click', startQuiz);
 
-const questions = document.querySelectorAll('.question');         // <=  Add this code to set up event listeners for question buttons.
+const questions = document.querySelectorAll('.question');
 questions.forEach((question, index) => {
     const buttons = question.querySelectorAll('button');
     buttons.forEach((button) => {
