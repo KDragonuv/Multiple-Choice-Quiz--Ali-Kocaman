@@ -27,3 +27,10 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
+## Known Issue
+
+Passed data does not save at the moment.
+
+## Deployed Website
+
+https://kdragonuv.github.io/Multiple-Choice-Quiz--Ali-Kocaman/ 
